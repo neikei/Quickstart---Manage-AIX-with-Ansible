@@ -32,7 +32,7 @@ Add your prepared SSH public key to your authorized_keys on the Ansible managed 
 
 ```echo "yourgeneratedpublickey" >> ~/.ssh/authorized_keys```
 
-Create a simple inventory with the Ansible managed AIX hostname for the SSH connection.
+Create a simple inventory with the group all and the server yourmanagedAnsibleAIX.
 
 ```bash
 echo "[all]" >> inventory.ini
@@ -87,7 +87,7 @@ Run the playbook on yourmanagedAnsibleAIX.
 
 ## Setup sudo to allow the Ansible user to execute commands as superuser
 
-If you want to allow the Ansible connect user to run commands as superuser.
+Add sudoers rule if you want to allow the Ansible connect user to run commands as superuser.
 
 ```echo "youransibleconnectuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers```
 

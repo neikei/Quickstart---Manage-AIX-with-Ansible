@@ -32,7 +32,7 @@ Add your prepared SSH public key to your authorized_keys on the Ansible managed 
 
 ```echo "yourgeneratedpublickey" >> ~/.ssh/authorized_keys```
 
-Create a simple inventory with the group all and the server yourmanagedAnsibleAIX.
+Create a simple inventory with the group all and the DNS name of yourmanagedAnsibleAIX.
 
 ```bash
 echo "[all]" >> inventory.ini
